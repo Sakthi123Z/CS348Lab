@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Font Control</title>
+    <style>
+        body {
+            font-family: Arial , sans-serif;
+            margin: 20px;
+        }
+        p {
+            font-size: 18px;
+            padding: 20px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Change Paragraph Style</h1>
+
+    <p id="paragraph">This is paragraph for you to change  biology is the study of living organisms and their interactions with the environment ... organisms are classified into different kingdoms based on their characteristics as plants , animals , fungi , and bacteria . cellular respiration and photosynthesis are key processes that sustain life on earth. ...  Please Change the style! </p>
+
+    <label for="rgb">Type RGB Color (like  255,0,0 for red):</label>
+    <input type="text" id="rgb" placeholder="255,0,0"><br><br>
+
+    <label for="border-width">Type Border Width (like 10px):</label>
+    <input type="text" id="border-width" placeholder="5px"><br><br>
+
+    <button onclick="changeStyle()">Apply Changes</button>
+
+    <script>
+        function changeStyle() {
+            var rgbValue = document.getElementById("rgb").value;
+            var borderWidth = document.getElementById("border-width").value;
+
+            var paragraph = document.getElementById("paragraph");
+
+            // Change The paragraph and border color using the RGB value
+            paragraph.style.color = "rgb(" + rgbValue + ")";
+            paragraph.style.borderColor = "rgb(" + rgbValue + ")";
+
+            // Change The border width
+            paragraph.style.borderWidth = borderWidth;
+        }
+    </script>
+
+</body>
+</html>

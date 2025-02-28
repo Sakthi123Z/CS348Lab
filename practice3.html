@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password validation</title>
+    <style>
+        body {
+            font-family: Arial , sans-serif;
+            margin: 20px;
+        }
+        .message {
+            font-weight : bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>The Password validation system ...</h2>
+    <form id="password-form">
+        <label for="password1"> Please Type the password first ... </label>
+        <input type="password" id="password1" name="password1" required><br><br>
+        
+        <label for="password2"> Please Type the password again  ... </label>
+        <input type="password" id="password2" name="password2" required><br><br>
+        
+        <button type="button" onclick="validatePasswords()">submit</button>
+    </form>
+    <p id="result" class="message"></p>
+
+    <script>
+        function validatePasswords() {
+            var password1 = document.getElementById('password1').value;
+            var password2 = document.getElementById('password2').value;
+            var result = document.getElementById('result');
+
+            if (password1 === password2 && password1.length >= 8) {
+                result.textContent = 'success , the passwoards >8 characters the same ';
+                result.style.color = 'green';
+            } else {
+                result.textContent = 'no , please retry the passwords ... ';
+                result.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>
