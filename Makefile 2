@@ -1,0 +1,7 @@
+# this is the makefile for compiling sakthics348lab10.cpp
+
+all:
+	g++ -std=c++11 SakthiCS348Lab10.cpp -o SakthiCS348Lab10
+
+clean:
+	rm -f SakthiCS348Lab10
